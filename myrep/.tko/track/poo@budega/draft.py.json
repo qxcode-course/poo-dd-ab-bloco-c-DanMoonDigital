@@ -2,8 +2,123 @@
     "patches": [
         {
             "label": "2025-11-11_15-56-47",
-            "content": "",
+            "content": "@@ -1,47 +0,0 @@\n-class Person:%0A    def __init__(self, name: str)\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-11-11_16-10-27",
+            "content": "@@ -44,38 +44,4 @@\n str)\n- -%3E None:%0A        self.name = name\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-11_16-10-43",
+            "content": "@@ -78,60 +78,4 @@\n name\n-%0A%0A    def __str__(self) -%3E str:%0A        return self.name\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-11_16-11-09",
+            "content": "@@ -1,143 +1,39 @@\n-class Person:%0A    def __init__(self, name: str) -%3E None:%0A        self.name = name%0A%0A    def __str__(self) -%3E str:%0A        return self.name%0A%0A\n+@@ -134,114 +134,4 @@%0A name%0A-%250A%250A\n clas\n@@ -40,17 +40,19 @@\n s Market\n-%0A\n+%250A\n     def \n@@ -88,16 +88,20 @@\n t) -\n-%3E\n+%253E\n  None:\n-%0A\n+%250A\n     \n@@ -126,24 +126,35 @@\n list\n-%5B\n+%255B\n Person \n-%7C\n+%257C\n  None\n-%5D = %5B%5D\n+%255D = %255B%255D%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-11_16-12-04",
+            "content": "@@ -144,17 +144,16 @@\n s Market\n-:\n %0A    def\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-11-11_16-12-12",
+            "content": "@@ -1,364 +1,1076 @@\n-class Person:\n+@@ -1,12 +1,32 @@%0A+@@ -1,253 +1,39 @@%250A-%0A class Person%0A@@ -26,17 +26,19 @@%0A  Person:%0A-%250A%0A+%25250A\n %0A    \n+ \n def \n-__init__(self, name: str) -%3E None:%0A        self.name = name%0A%0A    def __str__(self) -%3E str:%0A        return self.name%0A%0Aclass Market:%0A    def _init_(self, counter_size: int) -%3E None:%0A        self.counter: list%5BPerson %7C None%5D = %5B%5D%0A        for _in range(counter_size):%0A            self.counter.append(None)%0A        self.waiting: list %5BPerson%5D = %5B%5D\n+%0A@@ -64,24 +64,28 @@%0A : str) -%0A-%253E%0A+%25253E%0A  None:%0A-%250A%0A+%25250A%0A         %0A@@ -100,18 +100,22 @@%0A e = name%0A-%250A%250A%0A+%25250A%25250A%0A     def %0A@@ -133,15 +133,19 @@%0A f) -%0A-%253E%0A+%25253E%0A  str:%0A-%250A%0A+%25250A%0A     %0A@@ -168,10 +168,14 @@%0A name%0A-%250A%250A%0A+%25250A%25250A%0A clas%0A@@ -183,17 +183,19 @@%0A  Market:%0A-%250A%0A+%25250A%0A     def %0A@@ -231,16 +231,20 @@%0A t) -%0A-%253E%0A+%25253E%0A  None:%0A-%250A%0A+%25250A%0A     %0A@@ -269,33 +269,115 @@%0A list%0A-%255B%0A+%25255B%0A Person %0A-%257C%0A+%25257C%0A  None%0A-%255D = %255B%255D%250A    %0A+%25255D = %25255B%25255D%25250A%250A+@@ -245,55 +245,4 @@%25250A = %2525255B%2525255D%25250A-%2525250A%250A     %250A@@ -41,16 +41,17 @@%250A%0A     %0A@@ -385,16 +385,21 @@%0A or _%0A+%250A+ %250A %0A in range%0A (cou%0A@@ -398,36 +398,93 @@%0A ange%0A-(counter_size):%250A        %0A+%250A@@ -62,16 +62,18 @@%250A nter%250A-_%250A+-%250A size):%250A-%25250A%250A+%2525250A%250A     %250A@@ -84,70 +84,5 @@%250A%0A     %0A+ %250A-%0A self%0A@@ -504,17 +504,19 @@%0A nd(None)%0A-%250A%0A+%25250A%0A         %0A@@ -538,17 +538,31 @@%0A ist %0A-%255B%0A+%25255B%0A Person%0A-%255D = %255B%255D%0A+%25255D = %25255B%25255D%250A+%25250A%250A%0A\n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-11-11_16-23-33",
+            "content": "@@ -255,17 +255,16 @@\n    for _\n- \n in range\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-11_16-23-43",
+            "content": "@@ -362,79 +362,4 @@\n = %5B%5D\n-%0A%0A    def arrive(self, person: Person):%0A        self.waiting.append(person)\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-11_16-24-06",
+            "content": "@@ -437,55 +437,4 @@\n son)\n-%0A%0A    def leave(self, index: int) -%3E Person %7C None:\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-11_16-24-28",
+            "content": "@@ -488,56 +488,4 @@\n one:\n-%0A        if index %3C 0 or index %3E= len(self.counter):\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-11_16-24-52",
+            "content": "@@ -435,12 +435,109 @@\n erson)%0A%0A    \n+def leave(self, index: int) -%3E Person %7C None:%0A        if index %3C 0 or index %3E= len(self.counter):\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-11_16-25-03",
+            "content": "@@ -443,101 +443,4 @@\n     \n-def leave(self, index: int) -%3E Person %7C None:%0A        if index %3C 0 or Index %3E= len(self.counter):\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-11-11_16-25-41",
+            "content": "@@ -540,65 +540,4 @@\n er):\n-%0A            print(%22Indice invalido%22)%0A            return None\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-11_16-26-10",
+            "content": "@@ -509,17 +509,17 @@\n  %3C 0 or \n-i\n+I\n ndex %3E= \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-11_16-26-47",
+            "content": "@@ -128,12 +128,477 @@\n  self.name%0A%0A\n+class Market:%0A    def _init_(self, counter_size: int) -%3E None:%0A        self.counter: list%5BPerson %7C None%5D = %5B%5D%0A        for _ in range(counter_size):%0A            self.counter.append(None)%0A        self.waiting: list %5BPerson%5D = %5B%5D%0A%0A    def arrive(self, person: Person):%0A        self.waiting.append(person)%0A%0A    def leave(self, index: int) -%3E Person %7C None:%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A            return None\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-11-11_16-27-35",
+            "content": "@@ -136,181 +136,4 @@\n me%0A%0A\n-def main():%0A    market = Market(0)%0A    while True:%0A        line = input()%0A        print(%22$%22 + line)%0A        args = line.split(%22 %22)%0A        if args%5B0%5D == %22end%22:%0A            break\n",
+            "lines": "7"
+        },
+        {
+            "label": "2025-11-11_16-34-40",
+            "content": "@@ -134,126 +134,8 @@\n name\n-%0A    %0Aclass Market:%0A    def __init__ (self, counter_size: int) -%3E None:%0A        self.counter: list%5BPerson %7C None%5D = %5B%5D\n %0A%0Ade\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-11-11_16-35-28",
+            "content": "@@ -252,124 +252,8 @@\n = %5B%5D\n-%0A        for _ in range(counter_size):%0A            self.counter.appen(None)%0A        self.waiting: list %5BPerson%5D = %5B%5D\n %0A%0Ade\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-11_16-36-06",
+            "content": "@@ -370,223 +370,8 @@\n %5B%5D%0A%0A\n-    def arrive(self, person: Person):%0A        self.waiting.append(person)%0A%0A    def leave(self, index: int) -%3E Person %7C None:%0A        if index %3C 0 or index %3E= len(self.counter):%0A            print(%22Indice invalido%22)%0A%0A\n def \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-11_16-37-28",
+            "content": "@@ -583,198 +583,8 @@\n do%22)\n-%0A            return None%0A        if self.counter%5Bindex%5D is None:%0A            print(%22Caixa Vazio%22)%0A            return None%0A        aux = self.counter%5Bindex%5D%0A        self.counter%5Bindex%5D = None\n %0A%0Ade\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-11-11_16-38-45",
+            "content": "@@ -773,27 +773,8 @@\n None\n-%0A        return aux\n %0A%0Ade\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-11_16-38-51",
+            "content": "@@ -971,119 +971,4 @@\n reak\n-%0A        elif args %5B0%5D == %22end%22:%0A            break%0A        elif args %5B0%5D == %22init%22:%0A            qtd = int(args%5B1%5D)%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-11-11_16-40-05",
+            "content": "@@ -1086,36 +1086,4 @@\n 1%5D)%0A\n-            market = Market(qtd)\n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-11-11_16-40-29",
+            "content": "class Person:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\n    def __str__(self) -> str:\n        return self.name\n    \nclass Market:\n    def __init__ (self, counter_size: int) -> None:\n        self.counter: list[Person | None] = []\n        for _ in range(counter_size):\n            self.counter.appen(None)\n        self.waiting: list [Person] = []\n\n    def arrive(self, person: Person):\n        self.waiting.append(person)\n\n    def leave(self, index: int) -> Person | None:\n        if index < 0 or index >= len(self.counter):\n            print(\"Indice invalido\")\n            return None\n        if self.counter[index] is None:\n            print(\"Caixa Vazio\")\n            return None\n        aux = self.counter[index]\n        self.counter[index] = None\n        return aux\n\ndef main():\n    market = Market(0)\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args [0] == \"end\":\n            break\n        elif args [0] == \"init\":\n            qtd = int(args[1])\n            market = Market(qtd)",
+            "lines": "41"
         }
     ]
 }
