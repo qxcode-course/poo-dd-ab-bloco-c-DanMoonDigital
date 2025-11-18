@@ -32,6 +32,28 @@ class Market:
                 del self.waiting[i]
                 break
 
+    def call(self, index: int):
+        if index < 0 or index >= len(self.counter):
+            print("Indice Invalido")
+            return
+        if len(self.waiting) == 0:
+            print("Fila Vazia")
+            return
+        self.counter[index] = self.waiting[0]
+        del self. waiting [0]
+
+    def __str__(self) -> str:
+        pessoas = ", ".join([("-----" if x is None else str(x) for x in self.counter)])
+        saida: str = f"Caixas: [{pessoas}] \n"
+        for person in self.counter:
+            if person is None:
+                saida += "-----"
+            else:
+                saida += str(person) + " "
+        esperanndo = " ,".join([str(x)] for x in self.waiting)
+        saida += f"Espera: [{esperanndo}]"
+        return saida
+
 def main():
     market = Market(0)
     while True:
@@ -46,7 +68,7 @@ def main():
             qtd = int(args[1])
             market = Market(qtd)
         elif args [0] == "insert":
-            market.arrive(person(args[1]))
+            market.arrive(Person(args[1]))
         else:
             print("comando invalido")
 main()
