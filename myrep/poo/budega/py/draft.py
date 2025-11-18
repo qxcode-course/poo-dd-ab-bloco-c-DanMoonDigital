@@ -25,6 +25,12 @@ class Market:
         aux = self.counter[index]
         self.counter[index] = None
         return aux
+    
+    def give_up(self, name: str):
+        for i, person in enumerate(self.waiting):
+            if person.name == name:
+                del self.waiting[i]
+                break
 
 def main():
     market = Market(0)
@@ -39,3 +45,8 @@ def main():
         elif args [0] == "init":
             qtd = int(args[1])
             market = Market(qtd)
+        elif args [0] == "insert":
+            market.arrive(person(args[1]))
+        else:
+            print("comando invalido")
+main()
