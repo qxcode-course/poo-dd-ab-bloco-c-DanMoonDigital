@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-11-18_13-33-26",
-            "content": "",
+            "content": "@@ -1,163 +0,0 @@\n-class Grafite:%0A    def _init_(self, calibre, dureza, tamanho):%0A        self.calibre = calibre%0A        self.dureza = dureza%0A        self.tamanho = tamanho%0A%0A        \n",
             "lines": "0"
+        },
+        {
+            "label": "2025-11-19_23-29-46",
+            "content": "@@ -1,167 +1,33 @@\n-class Grafite:%0A    def _init_(self, calibre, dureza, tamanho):%0A        self.calibre = calibre%0A        self.dureza = dureza%0A        self.tamanho = tamanho%0A%0A        \n+@@ -160,101 +160,4 @@%0A     %0A-\n def \n@@ -38,17 +38,19 @@\n _(self):\n-%0A\n+%250A\n         \n@@ -65,10 +65,14 @@\n rn f\n-%22%7B\n+%2522%257B\n self\n@@ -79,19 +79,23 @@\n .calibre\n-%7D:%7B\n+%257D:%257B\n self.dur\n@@ -101,11 +101,15 @@\n reza\n-%7D:%7B\n+%257D:%257B\n self\n@@ -120,19 +120,25 @@\n anho\n-%7D%22%0A\n+%257D%2522%250A\n         \n %0Acla\n@@ -137,132 +137,13 @@\n     \n-%0A\n+%250A\n class\n- Lapisira:%0A    def _init_(self, calibre):%0A        self.calibre = calibre%0A        self.bico = None%0A        self.tambor = %5B%5D\n+%0A\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-19_23-31-19",
+            "content": "@@ -379,108 +379,4 @@\n = %5B%5D\n-%0A%0A    def insert(self, grafite):%0A        print()%0A%0A%0A%0Adef main():%0A    while: True:%0A        line =  input()\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-11-19_23-32-14",
+            "content": "class Grafite:\n    def _init_(self, calibre, dureza, tamanho):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n        def _str_(self):\n            return f\"{self.calibre}:{self.dureza}:{self.tamanho}\"\n        \nclass Lapisira:\n    def _init_(self, calibre):\n        self.calibre = calibre\n        self.bico = None\n        self.tambor = []\n\n    def insert(self, grafite):\n        print()\n\n\n\ndef main():\n    while: True:\n        line =  input()",
+            "lines": "23"
         }
     ]
 }
