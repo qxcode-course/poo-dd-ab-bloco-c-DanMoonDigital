@@ -7,13 +7,18 @@ class Person:
     
 class Market:
     def __init__ (self, counter_size: int) -> None:
-        self.counter: list[Person | None] = []
+        self.counters: list[Person | None] = []
         for _ in range(counter_size):
-            self.counter.appen(None)
-        self.waiting: list [Person] = []
+            self.counters.append(None)
+        self.waiting: list[Person] = []
 
     def arrive(self, person: Person):
         self.waiting.append(person)
+
+    def call(self, index: int):
+        if index < 0 or index >= len(self.counters):
+            print("fail: caixa inexistente")
+            return
 
     def leave(self, index: int) -> Person | None:
         if index < 0 or index >= len(self.counter):
@@ -34,14 +39,29 @@ class Market:
 
     def call(self, index: int):
         if index < 0 or index >= len(self.counter):
-            print("Indice Invalido")
+            print("fail: caixa inexistente")
             return
         if len(self.waiting) == 0:
-            print("Fila Vazia")
+            print("fail: caixa ocupado")
             return
-        self.counter[index] = self.waiting[0]
-        del self. waiting [0]
+        if len(self.waiting) == 0:
+            print("fail: sem clientes")
+            return
+        self.counters[index] = self.waiting.pop(0)
 
+    def finish(self, index: int):
+        if index < 0 or index >= len(self.counters):
+            print("fail: caixa inexistente")
+            return None
+        
+        if self.counters[index] is None:
+            print("fail: caixa vazio")
+            return None
+        
+        person = self.counter[index]
+        self.counters[index] = None
+        return person
+        
     def __str__(self) -> str:
         pessoas = ", ".join([("-----" if x is None else str(x) for x in self.counter)])
         saida: str = f"Caixas: [{pessoas}] \n"
@@ -67,7 +87,7 @@ def main():
         elif args [0] == "init":
             qtd = int(args[1])
             market = Market(qtd)
-        elif args [0] == "insert":
+        elif args [0] == "enter":
             market.arrive(Person(args[1]))
         else:
             print("comando invalido")
